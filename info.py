@@ -16,7 +16,7 @@ class Config(object):
     WEB_MODE = getenv("WEB_MODE", "False").lower() in ("true", "1", "yes")
     PORT = int(getenv("PORT", "8080"))  # default port for web services
     
-    CHANNEL_ID = int(getenv("CHANNEL_ID", ""))
+    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1003642299475"))
     OWNER_ID = int(getenv("OWNER_ID", "5770911041"))
 
     # Database
