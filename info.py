@@ -7,9 +7,9 @@ load_dotenv()
 id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
-    API_ID = int(getenv("API_ID", "0"))
-    API_HASH = getenv("API_HASH", "")
-    BOT_TOKEN = getenv("BOT_TOKEN", "")
+    API_ID = int(getenv("API_ID", "20594537"))
+    API_HASH = getenv("API_HASH", "c505a4e5bb7d482197875888af544f17")
+    BOT_TOKEN = getenv("BOT_TOKEN", "8176080394:AAGRMSTrImqfH21ANLlrHIGVC_HQNp1_GsU")
     BOT_WORKERS = int(getenv("BOT_WORKERS", "4"))
     
     # Webhook settings
@@ -17,10 +17,10 @@ class Config(object):
     PORT = int(getenv("PORT", "8080"))  # default port for web services
     
     CHANNEL_ID = int(getenv("CHANNEL_ID", ""))
-    OWNER_ID = int(getenv("OWNER_ID", ""))
+    OWNER_ID = int(getenv("OWNER_ID", "5770911041"))
 
     # Database
-    DATABASE_URL = getenv("DATABASE_URL", "")
+    DATABASE_URL = getenv("DATABASE_URL", "mongodb+srv://kumarnikhil6773:DY5PcJfO7x6gDEmQ@file-store-bot.zffpmw9.mongodb.net/?appName=File-store-bot")
     DATABASE_NAME = getenv("DATABASE_NAME", "Cluster0")
 
     # Force subscription
@@ -35,7 +35,7 @@ class Config(object):
     CUSTOM_CAPTION = getenv("CUSTOM_CAPTION", None)
 
     # ✅ Secure ADMINS (only numeric IDs)
-    admins = getenv("ADMINS", "").split()
+    admins = getenv("ADMINS", "5770911041").split()
     ADMINS = list(set(
         [int(x) for x in admins if x.isdigit()] + [OWNER_ID]
     ))
@@ -49,7 +49,7 @@ class Config(object):
     AUTO_DEL_SUCCESS_MSG = getenv("AUTO_DEL_SUCCESS_MSG", "✅ File deleted successfully.")
 
     # Token Verification (Shortlink)
-    VERIFY_MODE = getenv("VERIFY_MODE", "True").lower() in ("true", "1", "yes")
+    VERIFY_MODE = getenv("VERIFY_MODE", "False").lower() in ("true", "1", "yes")
     SHORTLINK_API = getenv("SHORTLINK_API", "")
     SHORTLINK_URL = getenv("SHORTLINK_URL", "")
     TOKEN_EXPIRE = int(getenv("TOKEN_EXPIRE", "21600"))  # default: 6 hours
